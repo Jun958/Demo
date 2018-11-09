@@ -7,8 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	
-
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
@@ -21,7 +19,6 @@
 	<meta name="twitter:card" content="" />
 		<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/my1.js"></script>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 	<link href='css/9520b66f1fd84705b21af20ed4e40529.css' rel='stylesheet' type='text/css'>
@@ -40,14 +37,14 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 
 	<!-- Modernizr JS -->
-	<!-- <script src="js/modernizr-2.6.2.min.js"></script> -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	
 	</head>
-<body id="head">
+<body>
 <div class="adcenter"><script src="js/ggad2_728x90.js"></script></div>
 	
 
@@ -96,9 +93,48 @@
 
 		<div class="grid">
 		  <div class="grid-sizer"></div>
-		</div>
+		  	<script type="text/javascript">
+				var flag = $(".grid-sizer");
+				var items = "";
+				$.ajax({
+					url: '/pathList',
+					async: false,
+					success: function(data) {
+						for(var path in data) {
+							var item = '<div class="grid-item item animate-box" data-animate-effect="fadeIn">' +
+					  		'<a href="img/'+data[path]+'"  class="image-popup" title="Name of photo or title here">'+
+							'<div class="img-wrap"><img src="img/'+data[path]+'" alt="" class="img-responsive"></div>'+
+							'<div class="text-wrap"><div class="text-inner popup"><div><h2>Name of photo or title here</h2></div>'+
+							'</div></div></a></div>';
+							flag.after(item);
+					}}
+				})
+	</script>
+	
+		  
+		  
+		  
 	</div>
-	</div>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+
+	<!-- Magnific -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Isotope & imagesLoaded -->
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<!-- GSAP  -->
+	<script src="js/tweenlite.min.js"></script>
+	<script src="js/cssplugin.min.js"></script>
+	<script src="js/easepack.min.js"></script>
+
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+	<script src="js/my1.js"></script>
 	</body>
 </html>
 

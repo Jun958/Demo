@@ -28,6 +28,11 @@ public class DemoContrller {
 		ModelAndView mv = new ModelAndView("index");
 		return mv;
 	}
+	@RequestMapping("/c")
+	public ModelAndView index2() {
+		ModelAndView mv = new ModelAndView("22");
+		return mv;
+	}
 	/**
 	 * 获取图片地址列表
 	 * @param map
